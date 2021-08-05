@@ -1,0 +1,20 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID Usuario</th>
+          <th scope="col">Url</th>
+          <th scope="col">UrlEncurtada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let url of urls">
+          <td>{{ url.idUsuario }}</td>
+          <td>{{ usuario.url }}</td>
+          <td>{{ usuario.urlEncurtada }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

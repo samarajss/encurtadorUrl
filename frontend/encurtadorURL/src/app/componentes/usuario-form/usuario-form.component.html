@@ -1,0 +1,28 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="login">Login</label>
+        <input type="text" [(ngModel)]="usuario.login"
+          class="form-control"
+          id="login"
+          name="login"
+          placeholder="Informe o login"
+          required #name="ngModel">
+      </div>
+      <div [hidden]="!name.pristine" class="alert alert-danger">Login é obrigatorio!</div>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="text" [(ngModel)]="usuario.senha"
+          class="form-control"
+          id="senha"
+          name="senha"
+          placeholder="Informe a senha"
+          required #email="ngModel">
+        <div [hidden]="!email.pristine" class="alert alert-danger">Senha é obrigatorio</div>
+      </div>
+      <button type="submit"
+        class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
